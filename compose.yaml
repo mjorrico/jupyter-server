@@ -1,0 +1,16 @@
+services:
+    jupyter:
+        build: .
+        container_name: jupyter
+        image: jupyter_server
+        ports:
+            - "8888:8888"
+        volumes:
+            - ./mount:/app/mount
+        environment:
+            - JUPYTER_TOKEN=${JUPYTER_TOKEN}
+        deploy:
+            resources:
+                limits:
+                    memory: 8g
+                    cpus: "4"
