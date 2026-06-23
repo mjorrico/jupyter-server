@@ -6,7 +6,9 @@ ENV HOME=/app
 
 WORKDIR /app
 
-RUN uv init . --python 3.12 && uv venv --python 3.12 && uv add jupyter pandas matplotlib numpy scipy scikit-learn seaborn plotly openpyxl xlrd statsmodels
+COPY pyproject.toml .
+
+RUN uv sync --python 3.12
 
 RUN chown -R jupyter:jupyter /app
 

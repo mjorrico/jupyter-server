@@ -1,0 +1,19 @@
+[project]
+name = "jupyter-server"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyter",
+    "pandas",
+    "matplotlib",
+    "numpy",
+    "scipy",
+    "scikit-learn",
+    "seaborn",
+    "plotly",
+    "openpyxl",
+    "xlrd",
+    "statsmodels",
+    "strands-agents[openai]>=1.44.0",
+    "strands-agents-tools>=0.8.1",
+]
